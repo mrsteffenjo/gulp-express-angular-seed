@@ -3,12 +3,10 @@ var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
 var rimraf = require('gulp-rimraf');
 var inject = require('gulp-inject');
 var config = require('./config/config');
-var bowerFiles = require('gulp-bower-files');
+var mainBowerFiles = require('main-bower-files');
 var less = require('gulp-less');
 
 
@@ -64,7 +62,7 @@ gulp.task('cpy_css', function () {
 });
 
 gulp.task('cpy_lib', function () {
-	return bowerFiles()
+	return gulp.src(mainBowerFiles())
 		.pipe(gulp.dest('build/lib/'));
 });
 
@@ -123,7 +121,7 @@ gulp.task('run_Server', function () {
 		ext: 'js html scss',
 		ignore: ['build', 'bower_components', 'node_modules', '.idea', '.git']
 	}).on('change', ['server_restart']).on('restart', function () {
-		console.log('restarted!')
+		console.log('restarted!');
 	});
 });
 gulp.task('server_restart', ['clean', 'hint'], function () {
