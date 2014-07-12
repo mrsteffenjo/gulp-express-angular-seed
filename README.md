@@ -9,5 +9,6 @@ gulp-express-angular-seed
  * gulp
  * bower
 
- 
+requirements: ```node``` and ```nodejs-legacy```
+
 run ```npm install``` && ```npm start```
