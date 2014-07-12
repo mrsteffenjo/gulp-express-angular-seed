@@ -1,9 +1,9 @@
 {
   "name": "expAng",
   "version": "0.0.0",
-  "homepage": "https://github.com/littleStudent/gulp-express-angular-seed",
+  "homepage": "https://github.com/mrsteffenjo/gulp-express-angular-seed",
   "authors": [
-    "Thomas Sattlecker <thomas.sattlecker@gmail.com>"
+    "Steffen Jørgensen <mrsteffenjo@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [

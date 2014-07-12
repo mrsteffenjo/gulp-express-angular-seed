@@ -1,6 +1,5 @@
 ### https://raw.github.com/github/gitignore/master/Compass.gitignore
 
-.sass-cache
 
 
 ### https://raw.github.com/github/gitignore/master/Global/JetBrains.gitignore
@@ -61,7 +60,8 @@ node_modules
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -72,9 +72,6 @@ Icon
 
 
 ### https://raw.github.com/github/gitignore/master/Global/SASS.gitignore
-
-### Sass Ignores - "Sassy CSS" http://sass-lang.com/
-*.sass-cache
 
 
 /bower_components
