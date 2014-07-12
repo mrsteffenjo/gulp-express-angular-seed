@@ -71,7 +71,4 @@ Icon
 .Trashes
 
 
-### https://raw.github.com/github/gitignore/master/Global/SASS.gitignore
-
-
 /bower_components
