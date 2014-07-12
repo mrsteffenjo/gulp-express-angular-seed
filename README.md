@@ -5,7 +5,7 @@ gulp-express-angular-seed
  * node
  * express
  * angularjs
- * sass
+ * less
  * gulp
  * bower
 

@@ -9,8 +9,7 @@ var rimraf = require('gulp-rimraf');
 var inject = require('gulp-inject');
 var config = require('./config/config');
 var bowerFiles = require('gulp-bower-files');
-var rsass = require('gulp-ruby-sass');
-var sass = require('gulp-sass');
+var less = require('gulp-less');
 
 
 // PRODUCTION CODE
@@ -59,8 +58,8 @@ gulp.task('cpy_views', function () {
 });
 
 gulp.task('cpy_css', function () {
-	return gulp.src([config.root + '/public/**/*.scss'])
-		.pipe(sass({sourcemap: true}))
+	return gulp.src([config.root + '/public/**/*.less'])
+		.pipe(less({sourcemap: true}))
 		.pipe(gulp.dest('build/css/'));
 });
 
@@ -122,7 +121,7 @@ gulp.task('run_Server', function () {
 		verbose: true,
 		script: 'server.js',
 		ext: 'js html scss',
-		ignore: ['build', 'bower_components', 'node_modules', '.sass-cache', '.idea', '.git']
+		ignore: ['build', 'bower_components', 'node_modules', '.idea', '.git']
 	}).on('change', ['server_restart']).on('restart', function () {
 		console.log('restarted!')
 	});
